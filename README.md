@@ -29,14 +29,6 @@ Clicking the **Refresh** button loads a new image, and the **Download** button a
 
 ---
 
-## How to Run
-1. Clone or download this repository
-2. Open the `index.html` (or `home.html`) file in any web browser
-3. Click **Refresh** to generate a new face
-4. Click **Download** to save the image
-
----
-
 ## Purpose
 This project was created for learning and practice.  
 It helped me improve my frontend basics, UI design, and JavaScript DOM handling.
