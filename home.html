@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Face Generator</title>
+</head>
+
+<body style="
+margin:0;
+font-family:'Segoe UI',Arial,sans-serif;
+background:linear-gradient(135deg,#1a1f36,#2b1055);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+">
+
+<div style="
+width:460px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+color:#fff;
+padding:26px;
+border-radius:22px;
+text-align:center;
+box-shadow:0 25px 60px rgba(0,0,0,0.4);
+">
+
+<h2 style="
+margin-top:0;
+font-weight:600;
+letter-spacing:1px;
+">
+AI Face Generator
+</h2>
+
+<p style="font-size:14px;color:#ddd;margin-bottom:22px;">
+Realistic AI-generated human faces
+</p>
+
+<div style="margin-bottom:22px;">
+<img id="faceImage"
+src="https://thispersondoesnotexist.com/"
+style="
+width:100%;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.3);
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+">
+</div>
+
+<div style="
+display:flex;
+justify-content:center;
+gap:18px;
+">
+
+<button onclick="refreshImage()" style="
+background:linear-gradient(90deg,#7f5cff,#4cc9f0);
+color:#fff;
+border:none;
+padding:12px 26px;
+border-radius:30px;
+cursor:pointer;
+font-size:15px;
+font-weight:500;
+box-shadow:0 8px 25px rgba(76,201,240,0.5);
+">
+Refresh
+</button>
+
+<button onclick="downloadImage()" style="
+background:transparent;
+color:#fff;
+border:1px solid rgba(255,255,255,0.6);
+padding:12px 26px;
+border-radius:30px;
+cursor:pointer;
+font-size:15px;
+">
+Download
+</button>
+
+</div>
+
+<p style="font-size:11px;color:#ccc;margin-top:18px;">
+The Persons Not In This World
+</p>
+
+</div>
+
+<script>
+function refreshImage() {
+  const img = document.getElementById("faceImage");
+  img.src = "https://thispersondoesnotexist.com/?" + new Date().getTime();
+}
+
+function downloadImage() {
+  const img = document.getElementById("faceImage");
+  const link = document.createElement("a");
+  link.href = img.src;
+  link.download = "ai-face.png";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
+</body>
+</html>
